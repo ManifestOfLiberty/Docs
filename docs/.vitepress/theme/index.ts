@@ -34,6 +34,7 @@ import TagsChips from './components/TagsChips.vue'
 import RelatedLinks from './components/RelatedLinks.vue'
 import ReadingProgress from './components/ReadingProgress.vue'
 import CustomLayout from './components/CustomLayout.vue'
+import TranslateButton from './components/TranslateButton.vue'
 
 // ---- Toast ----
 import Toast, { PluginOptions } from "vue-toastification"
@@ -50,6 +51,7 @@ export default {
     app.component('RelatedLinks', RelatedLinks)
     app.component('ReadingProgress', ReadingProgress)
     app.component('CustomLayout', CustomLayout)
+    app.component('TranslateButton', TranslateButton)
     app.component('vImageViewer', vImageViewer)
 
     app.provide(InjectionKey, {
@@ -137,12 +139,14 @@ export default {
       'nav-bar-content-after': () => [
         h(NolebaseEnhancedReadabilitiesMenu),
         h('div', { class: 'nav-actions-wrapper flex items-center gap-2' }, [
+          h(TranslateButton),
           h(ReportButton)
         ])
       ],
       'nav-screen-content-after': () => [
         h(NolebaseEnhancedReadabilitiesScreenMenu),
         h('div', { class: 'flex flex-col gap-2' }, [
+          h(TranslateButton),
           h(ReportButton)
         ])
       ],
