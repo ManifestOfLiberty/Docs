@@ -77,7 +77,7 @@ Steam injectors (OpenSteamTool, SteamTools, SmokeAPI) read local `.lua` files to
 -- Grant base game ownership
 addappid(3167020)
 
--- Register Workshop Depot AES key (prevents "CONTENT ENCRYPTED" on mod downloads)
+-- Register Workshop Depot AES key
 addappid(3167020, 0, "868bad77591803956d03d9863f4775a7d402330362cbd41c1c764c994dfae9fa")
 
 -- Game Content Depots
